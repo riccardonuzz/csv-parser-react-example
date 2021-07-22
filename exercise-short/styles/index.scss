@@ -1,0 +1,67 @@
+@import "./media-queries.scss";
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+
+    .container {
+        margin: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .left-container {
+            display: flex;
+            flex-direction: column;
+            flex: 7;
+            border-radius: 10px;
+            box-shadow: 5px 4px 11px 4px #e2e2e2;
+            margin-bottom: 20px;
+            margin-right: 20px;
+
+            @include xs {
+                flex: 1 100%;
+                margin-right: 0;
+            }
+
+            @include sm {
+                flex: 1 100%;
+                margin-right: 0;
+            }
+
+            @include md {
+                flex: 5;
+            }
+
+            @include lg {
+                flex: 7;
+            }
+        }
+
+        .right-container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            border-radius: 10px;
+            box-shadow: 5px 4px 11px 4px #e2e2e2;
+            margin-bottom: 20px;
+
+            @include xs {
+                flex: 1 100%;
+            }
+
+            @include sm {
+                flex: 1;
+            }
+
+            @include md {
+                flex: 1;
+            }
+
+            @include lg {
+                flex: 1;
+            }
+        }
+    }
+}

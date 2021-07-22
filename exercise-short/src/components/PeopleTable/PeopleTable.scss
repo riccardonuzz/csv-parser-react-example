@@ -1,0 +1,82 @@
+@import "../../../styles/media-queries.scss";
+
+.table-container {
+    padding: 15px;
+
+    .table {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-radius: 6px;
+        -moz-border-radius: 6px;
+
+        .row {
+            display: table-row;
+            padding: 5px 5px 5px;
+
+            &:first-child {
+                .cell {
+                    border-top: none;
+                    border-left: none;
+                    background-color: #4059ad;
+                    color: white;
+
+                    &:first-child {
+                        border-radius: 10px 0 0 0;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 10px 0 0;
+                    }
+
+                    &:nth-last-child(3) {
+                        @include sm {
+                            border-radius: 0 10px 0 0;
+        
+                        }
+                    }
+
+                    &:nth-last-child(4) {
+                        @include xs {
+                            border-radius: 0 10px 0 0;
+        
+                        }
+                    }
+                }
+            }
+        }
+
+        .cell {
+            display: table-cell;
+            padding: 5px 5px 5px;
+            border-left: 1px solid rgb(192, 192, 192);
+            border-top: 1px solid rgb(192, 192, 192);
+
+            .not-available {
+                color: grey;
+            }
+
+            &:first-child {
+                border-left: none;
+            }
+
+            &:nth-last-child(2),
+            &:last-child {
+                @include xs {
+                    display: none;
+                }
+
+                @include sm {
+                    display: none;
+                }
+            }
+
+            
+            &:nth-last-child(3) {
+                @include xs {
+                    display: none;
+                }
+            }
+        }
+    }
+}

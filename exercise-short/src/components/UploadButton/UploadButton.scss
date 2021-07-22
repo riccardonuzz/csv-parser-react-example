@@ -1,0 +1,17 @@
+@import "../../../styles/media-queries.scss";
+
+label {
+    display: inline-block;
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-right: 25px;
+
+    @include xs {
+        font-size: 12px;
+        padding: 7px;
+        line-height: 2;
+    }
+}
